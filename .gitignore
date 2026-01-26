@@ -1,0 +1,57 @@
+# Environnement virtuel
+venv/
+env/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Donnees - ignorer contenu mais garder structure
+data/raw/*
+data/merged/*
+data/outputs/*
+data/processed/*
+
+# Garder les .gitkeep pour la structure
+!data/raw/.gitkeep
+!data/merged/.gitkeep
+!data/outputs/.gitkeep
+!data/processed/.gitkeep
+
+# Garder uniquement train_selected et test_selected
+!data/processed/train_selected.csv
+!data/processed/test_selected.csv
+!data/processed/new_features.txt
+
+# Artifacts volumineux
+artifacts/pipeline_*/
+*.pkl
+
+# MLflow (chaque membre cree son tracking local)
+mlruns/
+
+# Secrets
+.env
+config.ini
+*.secret
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.tmp
+*.log
+*.bak
+
+# Gros fichiers de modeles (>100MB)
+# Les modeles legers (<100MB) sont autorises
+*.h5
